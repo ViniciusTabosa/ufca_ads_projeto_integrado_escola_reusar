@@ -9,6 +9,9 @@ class Doador(Usuario):
     @property
     def id_doador(self):
         return self._id_doador
+    @property
+    def historico_doacoes(self):
+        return self._historico_doacoes
 
     @id_doador.setter
     def id_doador(self, valor: int):
