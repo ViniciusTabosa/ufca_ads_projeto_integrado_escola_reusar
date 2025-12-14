@@ -14,6 +14,11 @@ class Recebedor(Usuario):
     def id_recebedor(self):
         return self._id_recebedor
 
+    @id_recebedor.setter
+    def id_recebedor(self, valor: int):
+        self._id_recebedor = valor
+
+
     def listar_meus_pedidos(self):
         return self._meus_pedidos
 

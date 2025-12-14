@@ -65,7 +65,7 @@ class Usuario:
 
     @endereco.setter
     def endereco(self, valor: str):
-        self._endereco = valor
+        self.endereco = valor
 
     # --- TELEFONE ---
     @property
