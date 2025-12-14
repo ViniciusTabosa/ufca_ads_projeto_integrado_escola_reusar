@@ -19,19 +19,19 @@ class Doacao:
 
     @property
     def id_doacao(self):
-        return self._id_doacao
+        return self.__id_doacao
 
     @property
     def doador(self):
-        return self._doador
+        return self.__doador
 
     @property
     def pedido(self):
-        return self._pedido
+        return self.__pedido
 
     @property
     def data_doacao(self):
-        return self._data_doacao
+        return self.__data_doacao
 
     @property
     def status_doacao(self):
