@@ -1,20 +1,22 @@
-# Postagem na plataforma informando que o usuário está precisando de materiais escolares
 from datetime import date
+from pedido_material import MateriaisPedido
 
 class PedidoDoacao:
-    def __init__(self, usuario, titulo, descricao):
+    def __init__(self, usuario, titulo, descricao, materiais: MateriaisPedido):
         data = date.today()
         self.__recebedor = usuario
         if (not isinstance(titulo, str)) or (not titulo.strip()):
-            self.__titulo = titulo
-        else:
             raise ValueError('Título inválido')
-
-        if (not isinstance(descricao, str)) or (not descricao.strip()):
-            self.__descricao = descricao
         else:
+            self.__titulo = titulo
+        if (not isinstance(descricao, str)) or (not descricao.strip()):
             raise ValueError('Descrição inválido')
-
+        else:
+            self.__descricao = descricao
+        if not isinstance(materiais, MateriaisPedido):
+            raise ValueError('Elemento inválido')
+        else:
+            self.materiais = materiais
         self.__data = f'{data.day}/{data.month}/{data.year}'
         self.__pedidoAberto = True
 
