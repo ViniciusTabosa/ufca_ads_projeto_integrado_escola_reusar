@@ -17,3 +17,8 @@ O projeto Escolar Reusar tem como objetivo principal conectar pessoas que deseja
 Facilitando qualquer usuário na busca por locais de doação de maneira rápida e no descobrimento de novas entidades que preicam de materiais escolares.
 
 A aplicação web segue o seguinte fluxo: o usuário acessa a plataforma, que solicita a identificação do seu perfil, doador ou recebedor, e em seguida, o direciona para o formulário de cadastro correspondente. Caso o usuário seja um recebedor, ele poderá criar uma publicação descrevendo seu pedido de doação, que será listado em feed com outros pedidos de outros usuários. Os doadores, ao acessar a plataforma, verão todos as publicações de pedidos e decidirá qual entidade ajudar.
+
+## Exemplo de uso
+Um professor que oferece aulas de reforço em matemática está precisando de livros de matemática, então ele acessa o site Escola Reusar e cria um pedido de doação.
+No bairro do lado, um jovem que acabou de sair do ensino médio, deseja repassar os livros da escola por ocuparem muito espaço e entra no site Escola Reusar, ao indicar sua localização, o site mostra que no bairro vizinho tem alguém precisando de livros de matemática.
+Os dois usuários entram em contato e realizam a doação.
