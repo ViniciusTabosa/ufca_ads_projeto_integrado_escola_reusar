@@ -1,5 +1,5 @@
 from datetime import date
-from pedido_material import MateriaisPedido
+from src.models.pedido_material import MateriaisPedido
 
 class PedidoDoacao:
     def __init__(self, usuario, titulo, descricao, materiais: MateriaisPedido):
