@@ -11,10 +11,10 @@ class Doacao:
         if pedido is None:
             raise ValueError("Pedido inválido.")
         
-        self.id_doacao = id_doacao
-        self.doador = doador
-        self.pedido = pedido
-        self.data_doacao = data_doacao if data_doacao else date.today()
+        self.__id_doacao = id_doacao
+        self.__doador = doador
+        self.__pedido = pedido
+        self.__data_doacao = data_doacao if data_doacao else date.today()
         self.status_doacao = status_doacao
 
     @property
