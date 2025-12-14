@@ -5,13 +5,13 @@ from src.models.pedido_doacao import PedidoDoacao
 class Doacao:
     def __init__(self, id_doacao: int, doador: Doador, pedido: PedidoDoacao, data_doacao=None, status_doacao="Pendente"):
         if not isinstance(id_doacao, int) or id_doacao <= 0:
-            raise ValueError("ID da doação deve ser maior que zero.")
+            raise ValueError('ID da doação deve ser maior que zero.')
 
         if not isinstance(doador, Doador):
-            raise ValueError("Doador inválido.")
+            raise ValueError('Doador inválido.')
 
         if not isinstance (pedido, PedidoDoacao):
-            raise ValueError("Pedido inválido.")
+            raise ValueError('Pedido inválido.')
         
         if status_doacao not in ["Pendente", "Realizada", "Cancelada"]:
             raise ValueError("Status da doação inválido.")
