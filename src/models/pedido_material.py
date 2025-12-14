@@ -1,8 +1,10 @@
+from material_escolar import MaterialEscolar
+
 class MateriaisPedido:
-    def __init__(self, *args):
+    def __init__(self, *args: MaterialEscolar):
         self.__materiais = []
         for i in args:
-            if (not isinstance(i, str)) or (not i.strip()):
+            if not isinstance(i, MaterialEscolar):
                 raise ValueError('Item inválido')
             else:
                 self.__materiais.append(i)
