@@ -65,7 +65,7 @@ class Usuario:
 
     @endereco.setter
     def endereco(self, valor: str):
-        self.endereco = valor
+        self._endereco = valor
 
     # --- TELEFONE ---
     @property
@@ -83,6 +83,6 @@ class Usuario:
         return False
 
     def atualizar_contato(self, novo_endereco: str, novo_telefone: int):
-        self._endereco = novo_endereco
-        self._telefone = novo_telefone
+        self.endereco = novo_endereco
+        self.telefone = novo_telefone
         return "Dados de contato atualizados com sucesso."
