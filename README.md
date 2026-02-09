@@ -23,7 +23,7 @@ Um professor que oferece aulas de reforço em matemática está precisando de li
 No bairro do lado, um jovem que acabou de sair do ensino médio, deseja repassar os livros da escola por ocuparem muito espaço e entra no site Escola Reusar, ao indicar sua localização, o site mostra que no bairro vizinho tem alguém precisando de livros de matemática.
 Os dois usuários entram em contato e realizam a doação.
 
-💾 Projeto Físico de Banco de Dados
+## 💾 Projeto Físico de Banco de Dados
 
 📌 O que é?
 O projeto físico de banco de dados é a etapa na qual transformamos o modelo do sistema em estruturas reais dentro do banco. Em termos mais técnicos, é o processo de escolha de estruturas específicas e caminhos de acesso para os arquivos do banco de dados, visando um bom desempenho. Nessa etapa são definidos:
