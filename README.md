@@ -25,7 +25,7 @@ Os dois usuários entram em contato e realizam a doação.
 
 ## 💾 Projeto Físico de Banco de Dados
 
-# 📌 O que é?
+ 📌 O que é?
 O projeto físico de banco de dados é a etapa na qual transformamos o modelo do sistema em estruturas reais dentro do banco. Em termos mais técnicos, é o processo de escolha de estruturas específicas e caminhos de acesso para os arquivos do banco de dados, visando um bom desempenho. Nessa etapa são definidos:
     📊 Tabelas e colunas;
     🔤 Tipos de dados;
@@ -33,15 +33,15 @@ O projeto físico de banco de dados é a etapa na qual transformamos o modelo do
     ⚡Índices e regras de integridade;
     🗂️ Estratégias de organização dos dados.
 
-# ⚙️Como isso funciona na prática?
+ ⚙️Como isso funciona na prática?
 As diferentes formas de organizar os dados, como indexação para acelerar consultas, organização de registros em arquivos e controle de integridade dos dados, são oferecidas pelos Sistemas Gerenciadores de Banco de Dados (SGBDs). Como exemplos destes sistemas, têm-se:
     🐘 PostgreSQL;
     🐬 MySQL;
     🪟 SQL Server.
 
-# 🚀 Por que isso é importante para quem está aprendendo programação?
+ 🚀 Por que isso é importante para quem está aprendendo programação?
 O correto entendimento do projeto físico ajuda a criar sistemas mais organizados e confiáveis; evitar duplicidade ou inconsistência de dados; melhorar o desempenho das aplicações; desenvolver soluções mais próximas da realidade do mercado. Assim, entenda que a modelagem de dados define quais os dados existentes e o projeto físico define como esses dados são armazenados e acessados.
 
-# 🎓Exemplo prático - Escola Reusar
+ 🎓Exemplo prático - Escola Reusar
 No projeto Escola Reusar, o projeto físico foi importante para fazer a transformação do modelo conceitual em tabelas reais. Por exemplo, a entidade usuário, virou a tabela usuário. Os perfis doador e recebedor foram implementados como especializações dessa tabela de usuário. E as chaves estrangeiras garantem que não exista doação ou pedido sem um usuário válido. Considerando tudo isso, evita-se inconsistência no sistema e ajuda a manter os dados organizados.
 
