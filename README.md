@@ -45,3 +45,34 @@ O correto entendimento do projeto físico ajuda a criar sistemas mais organizado
 ### 🎓Exemplo prático - Escola Reusar
 No projeto Escola Reusar, o projeto físico foi importante para fazer a transformação do modelo conceitual em tabelas reais. Por exemplo, a entidade usuário, virou a tabela usuário. Os perfis doador e recebedor foram implementados como especializações dessa tabela de usuário. E as chaves estrangeiras garantem que não exista doação ou pedido sem um usuário válido. Considerando tudo isso, evita-se inconsistência no sistema e ajuda a manter os dados organizados.
 
+## 🏗️ Passo a Passo: Criação de Wireframes
+
+Um wireframe é um esboço estrutural de baixa fidelidade, essencial no design de sites e aplicativos, que define o layout, a hierarquia de informações e a funcionalidade, sem focar em elementos estéticos como cores ou imagens. Abaixo está listado o passo a passo para prototipação de um wireframe
+
+#### 🎯 1. Definir o Objetivo, escopo e hierarquia das páginas
+- Listar as páginas: Identifica-se as páginas que estarão presentes na aplicação, para isso pode-se utilizar um sitemap, que elucida e hierarquiza as páginas.
+- Identifique as metas: esse ponto tem o objetivo de identificar as ações que o usuário vai desenvolver em cada página identificada anteriormente. (Ex: Comprar, Cadastrar, Ler).
+- Liste os elementos: lista os componentes que são obrigatórios. (Ex: Barra de busca, Botão de CTA, Rodapé).
+
+#### ✍ ️ 2. Começar com Baixa Fidelidade
+- Rabiscos rápidos: Desenhe versões diferentes do mesmo layout.
+- Sem detalhes: Use quadrados para imagens e linhas para textos.
+- Foco no fluxo: Pense em como os elementos se conectam visualmente.
+
+#### 📐 3. Definir a Grade e a Estrutura (Grid)
+- Sistema de Grids: Use colunas para alinhar os elementos.
+- Zonas de Conteúdo: Bloqueie áreas grandes para cabeçalho, corpo e barra lateral.
+
+#### 🔝 4. Estabelecer a Hierarquia Visual
+- Tamanho importa: O elemento principal (ex: Título H1) deve ser o maior.
+- Contraste de cinzas: Use tons de cinza mais escuros para elementos de destaque e cinza claro para o que é secundário.
+
+#### 🔄 5. Revisar e Iterar
+- Teste de usabilidade: Mostre os desenhos para outras pessoas, observe as opiniões e se a usabilidade está adequada.
+- Ajustes finos: Refine os espaçamentos (padding/margin) antes de passar para a fase de UI (Cores e Fontes).
+
+#### 💡Design Centrado no Usuário:
+
+O design centrado no usuário assegura que a tomada de decisões seja fundamentada nas necessidades e comportamentos do público-alvo. Essa filosofia garante que o desenvolvimento de interfaces não foque apenas na estética, mas que o projeto seja, acima de tudo, útil, utilizável e desejável. Dentro dessa tríade, a usabilidade destaca-se como o pilar fundamental: um sistema eficiente possui uma interface intuitiva, visualmente encorajadora e com baixa curva de aprendizado. Essa característica está intimamente ligada ao perfil do usuário, uma vez que o fator geracional influencia diretamente o design; enquanto pessoas da terceira idade podem demandar mais tutoriais e auxílio na navegação, as novas gerações podem sentir desânimo diante desse excesso de instruções. Quanto à utilidade, ela se manifesta plenamente quando o sistema é modelado com base nas dores reais do usuário, tornando-se uma ferramenta personalizada e funcional. Ao atender a esses requisitos de utilidade e usabilidade, o terceiro pilar — o desejo — é alcançado naturalmente, pois a vontade de utilização por parte do usuário é o resultado direto da excelente experiência obtida durante a interação com o sistema.
+
+
