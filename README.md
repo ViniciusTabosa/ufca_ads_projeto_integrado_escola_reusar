@@ -42,7 +42,7 @@ As diferentes formas de organizar os dados, como indexação para acelerar consu
 ### 🚀 Por que isso é importante para quem está aprendendo programação?
 O correto entendimento do projeto físico ajuda a criar sistemas mais organizados e confiáveis; evitar duplicidade ou inconsistência de dados; melhorar o desempenho das aplicações; desenvolver soluções mais próximas da realidade do mercado. Assim, entenda que a modelagem de dados define quais os dados existentes e o projeto físico define como esses dados são armazenados e acessados.
 
-### 🎓Exemplo prático - Escola Reusar
+### 🎓 Exemplo prático - Escola Reusar
 No projeto Escola Reusar, o projeto físico foi importante para fazer a transformação do modelo conceitual em tabelas reais. Por exemplo, a entidade usuário, virou a tabela usuário. Os perfis doador e recebedor foram implementados como especializações dessa tabela de usuário. E as chaves estrangeiras garantem que não exista doação ou pedido sem um usuário válido. Considerando tudo isso, evita-se inconsistência no sistema e ajuda a manter os dados organizados.
 
 ## 🏗️ Passo a Passo: Criação de Wireframes
@@ -71,7 +71,7 @@ Um wireframe é um esboço estrutural de baixa fidelidade, essencial no design d
 - Teste de usabilidade: Mostre os desenhos para outras pessoas, observe as opiniões e se a usabilidade está adequada.
 - Ajustes finos: Refine os espaçamentos (padding/margin) antes de passar para a fase de UI (Cores e Fontes).
 
-#### 💡Design Centrado no Usuário:
+#### 💡 Design Centrado no Usuário:
 
 O design centrado no usuário assegura que a tomada de decisões seja fundamentada nas necessidades e comportamentos do público-alvo. Essa filosofia garante que o desenvolvimento de interfaces não foque apenas na estética, mas que o projeto seja, acima de tudo, útil, utilizável e desejável. Dentro dessa tríade, a usabilidade destaca-se como o pilar fundamental: um sistema eficiente possui uma interface intuitiva, visualmente encorajadora e com baixa curva de aprendizado. Essa característica está intimamente ligada ao perfil do usuário, uma vez que o fator geracional influencia diretamente o design; enquanto pessoas da terceira idade podem demandar mais tutoriais e auxílio na navegação, as novas gerações podem sentir desânimo diante desse excesso de instruções. Quanto à utilidade, ela se manifesta plenamente quando o sistema é modelado com base nas dores reais do usuário, tornando-se uma ferramenta personalizada e funcional. Ao atender a esses requisitos de utilidade e usabilidade, o terceiro pilar — o desejo — é alcançado naturalmente, pois a vontade de utilização por parte do usuário é o resultado direto da excelente experiência obtida durante a interação com o sistema.
 
@@ -84,5 +84,31 @@ Para viabilizar e validar essas decisões antes do desenvolvimento final, a equi
 
 A ferramenta empregada foi o Figma, utilizada na criação das interfaces, no mapeamento de fluxos e no desenvolvimento do protótipo interativo de alta fidelidade. Como o projeto encontra-se atualmente nesta etapa de validação, a utilização e os testes da aplicação ocorrem de forma interativa diretamente na ferramenta. Para navegar pelo sistema e simular a experiência real da plataforma, o usuário deve acessar o link do projeto no Figma [Escola Reusar](https://www.figma.com/design/chwkya39dL4TxGpgHQ3Keo/ESCOLA-REUSAR?node-id=12-2&t=tQ774DTxH2ULADrX-1), clicar no botão de Play (Present / Apresentar) localizado no canto superior direito da tela e interagir diretamente com os botões das telas. Dessa forma, a Escola Reusar demonstra que investir em UX significa criar experiências mais humanas, eficientes e verdadeiramente acessíveis para todos.
 
+## 📐 Arquitetura de Software
+
+### O que é arquitetura de software?
+Para os desenvolvedores do projeto “Escola Reusar”, a definição de arquitetura de software não se restringe a escolha de linguagens ou frameworks de programação. Compreende-se que essa arquitetura é um conjunto de decisões estratégicas de alto nível que definem a estrutura, o comportamento e as interações entre os componentes de um sistema computacional. Fazendo uma analogia com a construção civil, enquanto o código limpo representa os tijolos bem assentados, a arquitetura de software consiste na planta estrutural do edifício, ou seja, é ela quem garante que a edificação não caia quando novas cargas forem adicionadas e que os demais sistemas (elétricos e hidráulicos) funcionem corretamente.
+
+### Qual sua importância no desenvolvimento de sistemas?
+A arquitetura de software em um projeto, consegue se traduzir diretamente em valor de negócio, por envolver decisões estratégicas críticas para o ciclo de desenvolvimento do software. Não seguir uma arquitetura no início do desenvolvimento pode condenar toda a vida do software e os esforços para consertar os erros do passado podem sair muito caros.
+
+### Como ela impacta:
+- Escalabilidade:
+  
+  Permite que o sistema consiga crescer e suportar um aumento expressivo na carga de trabalho (como um pico de acessos de doadores e recebedores no início do ano letivo) sem perder qualidade. Uma boa arquitetura, como o modelo Cliente-Servidor adotado, permite que o sistema seja escalado com facilidade, seja adicionando mais recursos ao servidor ou distribuindo as requisições de forma equilibrada. 
+  
+- Segurança:
+  
+  A estruturação em camadas permite a criação de barreiras de proteção bem definidas e isoladas. Ao utilizar o modelo MVC, garantimos, por exemplo, que o banco de dados (Model) não fique exposto diretamente à internet. Toda e qualquer requisição externa passa obrigatoriamente pela validação de regras de negócio e autenticação do Backend (Controller) antes de acessar dados sensíveis. 
+  
+- Desempenho:
+  
+  A arquitetura dita a eficiência de como os dados trafegam e como os recursos da máquina são consumidos. Decisões arquiteturais sólidas — como o uso do Node.js para processamento assíncrono e leve, somado à correta modelagem e indexação de tabelas no PostgreSQL — garantem respostas rápidas e uma experiência fluida para os usuários, mesmo em conexões de internet mais lentas. 
+  
+- Manutenção e Evolução do sistema:
+  
+  Trata-se da capacidade do sistema de receber correções e adaptar-se a novas necessidades ao longo do tempo sem perder sua estabilidade. Ao adotar uma arquitetura que isola as responsabilidades através do modelo MVC (onde a interface gráfica não se mistura com as regras de negócio ou com o banco de dados), garantimos um baixo nível de acoplamento estrutural. Na prática, isso permite que a equipe isole e corrija falhas rapidamente sem causar efeitos colaterais na aplicação, ao mesmo tempo em que prepara o sistema para receber novas funcionalidades no futuro — como novas integrações ou perfis de usuários — de maneira orgânica, segura e sem a necessidade de reescrever o código já consolidado.
 
 
+### Como a arquitetura influencia diretamente a qualidade de um projeto de software?
+  A arquitetura de software assegura que fatores como escalabilidade, segurança, desempenho, manutenção e evolução do sistema atendam aos requisitos apontados pelo cliente, evite retrabalho da equipe de desenvolvimento, aumenta a longevidade do software e que seja capaz de se adaptar a requisitos em constante mudança. 
