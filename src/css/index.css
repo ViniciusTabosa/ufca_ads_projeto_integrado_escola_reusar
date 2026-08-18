@@ -1,0 +1,89 @@
+/* Reset, cabeçalho e rodapé compartilhados: css/base.css */
+
+:root {
+  --azul-escuro: #444a5f;
+  /* cabeçalho */
+  --azul-rodape: #353843;
+  /* rodapé */
+  --verde: #00cca0;
+  /* logo e detalhes */
+  --verde-claro: #56eecd;
+  /* botão "Mostrar mais" */
+  --amarelo-forte: #fdf279;
+  /* faixa de título do pedido */
+  --amarelo-claro: #f8f4bd;
+  /* descrição do pedido */
+  --cinza-borda: #d9dbe0;
+  --texto: #3b3b3b;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Principal */
+
+.conteudo-principal {
+  display: flex;
+  margin: 0 auto;
+}
+
+.apresentacao {
+  font-size: 1.7rem;
+  max-width: 750px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apresentacao span {
+  color: var(--verde-claro);
+}
+
+.bloco-principal {
+  margin: 3rem 6rem;
+}
+
+#imagem-principal {
+  width: 50vw;
+  max-width: 500px;
+}
+
+@media (max-width: 320px) {
+  #imagem-principal img {
+    width: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .apresentacao {
+    font-size: 1.5rem;
+  }
+  .bloco-principal {
+    margin: 3rem 3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .apresentacao {
+    font-size: 1.2rem;
+  }
+  .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+  }
+  .bloco-principal {
+    margin: 1rem 1.5rem;
+  }
+  #imagem-principal img {
+    width: 20em;
+  }
+}

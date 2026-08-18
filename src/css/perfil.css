@@ -1,0 +1,129 @@
+/* Reset, cabeçalho e rodapé compartilhados: css/base.css */
+
+:root {
+  --azul-escuro: #444a5f;
+  /* cabeçalho */
+  --azul-rodape: #353843;
+  /* rodapé */
+  --verde: #00cca0;
+  /* logo e detalhes */
+  --verde-claro: #56eecd;
+  /* botão "Mostrar mais" */
+  --amarelo-forte: #fdf279;
+  /* faixa de título do pedido */
+  --amarelo-claro: #f8f4bd;
+  /* descrição do pedido */
+  --cinza-borda: #d9dbe0;
+  --texto: #3b3b3b;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Perfil */
+
+.conteudo-perfil {
+  margin: 1rem auto;
+}
+
+.info-perfil {
+  max-width: 40rem;
+  height: 30rem;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr;
+  border: 2px solid var(--cinza-borda);
+  padding: 2rem 0 0.5rem 0;
+  border-radius: 12px;
+  justify-items: center;
+}
+
+.imagem-perfil {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.imagem-perfil img {
+  border: 4px solid var(--verde);
+  border-radius: 100%;
+  background-color: var(--verde);
+  margin-bottom: 20px;
+}
+
+.detalhes-perfil form {
+  display: flex;
+  flex-direction: column;
+}
+
+.detalhes-perfil input {
+  margin-bottom: 20px;
+}
+
+.info-forms {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.info-forms li {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.info-forms h2,
+li {
+  color: var(--azul-escuro);
+}
+
+.form-perfil input {
+  border-radius: 12px;
+  border: 2px solid var(--cinza-borda);
+  height: 30px;
+  width: 220px;
+  padding: 4px;
+}
+
+.label-form {
+  color: var(--azul-escuro);
+  font-weight: 600;
+}
+
+.btn-perfil {
+  background-color: var(--verde-claro);
+  border: 2px solid var(--verde);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.btn-perfil:hover {
+  background-color: var(--verde);
+}
+
+#btn-salvar-form {
+  grid-column: 1/-1;
+  align-self: flex-end;
+  width: 100px;
+}
+
+@media (max-width: 425px) {
+  .info-perfil {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    height: 45rem;
+  }
+
+  .imagem-perfil img {
+    width: 8rem;
+  }
+}
