@@ -1,0 +1,256 @@
+/* =====================================================
+   BASE COMPARTILHADA — importar em TODAS as páginas,
+   ANTES do CSS específico da página.
+   Contém: reset, layout do body, cabeçalho e rodapé.
+   ===================================================== */
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== CABEÇALHO (PADRÃO DESKTOP) ===== */
+
+header {
+  background: #4d5269;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 55px;
+}
+
+.logo h1 {
+  color: #2fe7c4;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 28px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: white;
+  color: #4d5269;
+}
+
+/* ===== MENU LOGADO ===== */
+
+.menu-logado ul {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.menu-logado a {
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.menu-logado a.ativo {
+  background: white;
+  color: #4d5269;
+  font-weight: 600;
+}
+
+/* ===== RODAPÉ ===== */
+
+footer {
+  background: #2d3040;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 18px;
+}
+
+footer a {
+    color: #2FE7C4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVIDADE DO CABEÇALHO E MENU (MEDIA QUERIES)
+   ===================================================== */
+
+/* Tablets e Celulares (Telas até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 45px;
+    }
+
+    nav, .menu-logado {
+        width: 100%;
+    }
+
+    nav ul, .menu-logado ul {
+        gap: 8px;
+    }
+
+    nav a, .menu-logado a {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Celulares Pequenos (Telas até 480px) */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul, .menu-logado ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    nav a, .menu-logado a {
+        text-align: center;
+        display: block;
+        padding: 10px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .menu-faketrigger {
+        display: none;
+    }
+}
+
+@media (max-width: 426px){
+    .logo {
+        gap: 0px;
+    }
+    .logo h1 {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px;
+        
+    }
+
+    .menu-lines {
+        position: absolute;
+        z-index: 2;
+        top: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-lines span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #00cca0;
+        border-radius: 3px;
+        transition: all ease .2s;
+    }
+
+    .menu-faketrigger {
+        position: absolute;
+        z-index: 3;
+        top: 20px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+        opacity: 0;
+    }
+
+    .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+        transform-origin: 0% 0%;
+        transform: rotate(45deg) scaleX(1.25);
+        
+    }
+    .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+        opacity: 0;
+    }
+    .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+        transform-origin: 0% 100%;
+        transform: rotate(-45deg) scaleX(1.25);
+    }
+
+    .menu ul {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        padding-top: 100px;
+        background-color: #4d5269f5;
+        margin-right: -300px;
+        transition: all ease .2s;
+        display: none;
+    }
+
+    .menu-faketrigger:checked ~ ul{
+        transition: all ease .2s;
+        display: flex;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../imgs/logo.png" alt="Logo Escola Reusar">
+      <h1>Escola Reusar</h1>
+    </div>
+    
+    <nav class="menu-logado menu">
+      <input type="checkbox" class="menu-faketrigger">
+
+      <div class="menu-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul>
+        <li><a href="lista-pedidos.html">Área de pedidos</a></li>
+        <li><a href="criacao-pedidos.html">Novo pedido</a></li>
+        <li><a href="meus-pedidos.html">Meus pedidos</a></li>
+        <li><a class="ativo" href="perfil.html">Meu perfil</a></li>
+        <li><a href="../index.html">Sair</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <main class="conteudo-perfil">
+    <section class="info-perfil">
+      <div class="imagem-perfil">
+        <img src="../imgs/foto-usuario.png" alt="Foto do usuário">
+        <button class="btn-perfil">Alterar imagem</button>
+      </div>
+      <div class="detalhes-perfil">
+        <form action="./" method="post" class="form-perfil">
+          <ul class="info-forms">
+            <h2>Detalhes do usuário</h2>
+
+            <li for="inp-nome">Nome: </li>
+            <label for="inp-nome">Gohan da Silva </label>
+
+            <li for="inp-nome">Email: </li>
+            <label for="inp-nome">gohandasilvaGS@gmail.com</label>
+          </ul>
+          <label for="inp-nome" class="label-form">Nome</label>
+          <input type="text" id="inp-nome" placeholder="Alterar nome de usuário">
+
+          <label for="inp-email" class="label-form">E-mail</label>
+          <input type="text" id="inp-email" placeholder="Novo e-mail">
+
+          <label for="inp-senha" class="label-form">Senha</label>
+          <input type="text" id="inp-senha" placeholder="Nova senha">
+
+          <label for="inp-confirm" class="label-form">Confirmar senha</label>
+          <input type="text" id="inp-confirm" placeholder="Confirmar nova senha">
+        </form>
+      </div>
+      <button id="btn-salvar-form" class="btn-perfil">Salvar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Code by: <a href="https://github.com/ViniciusTabosa/ufca_ads_escolar_reusar_front-end"
+        target="_blank">PISociety</a></p>
+  </footer>
+</body>
+
+</html>
