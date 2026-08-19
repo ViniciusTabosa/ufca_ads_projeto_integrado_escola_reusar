@@ -1,17 +1,17 @@
 # Escola Reusar
 
 ## Universidade: Universidade Federal do Cariri (UFCA)
-## Polo: Itapipoca-Ce
-## Semestre: 2025.2
-## Disciplina: Projeto Integrado
+### Polo: Itapipoca-Ce
+### Semestre: 2025.2
+### Disciplina: Projeto Integrado
 ## Equipe 9
 - SARAH OLIVEIRA LUCAS DIÓGENES (2025013808)
 - SAULO VICTO SOARES (2025013853)
 - PABLO HENRIQUE LIMA DE ARAUJO (2025013700)
 - VINICIUS TABOSA DOS SANTOS (2025013890)
 
-## Escola Reusar e possíveis usos da nossa solução
 
+## 🏫 Escola Reusar e possíveis usos da nossa solução
 
 O projeto Escolar Reusar tem como objetivo principal conectar pessoas que desejam doar materiais escolares a indivíduos ou instituições que necessitam desses itens e que estejam na mesma cidade ou bairros em volta do doador.
 Facilitando qualquer usuário na busca por locais de doação de maneira rápida e no descobrimento de novas entidades que precisam de materiais escolares.
@@ -19,9 +19,110 @@ Facilitando qualquer usuário na busca por locais de doação de maneira rápida
 A aplicação web segue o seguinte fluxo: o usuário acessa a plataforma, que solicita a identificação do seu perfil, doador ou recebedor, e em seguida, o direciona para o formulário de cadastro correspondente. Caso o usuário seja um recebedor, ele poderá criar uma publicação descrevendo seu pedido de doação, que será listado em feed com outros pedidos de outros usuários. Os doadores, ao acessar a plataforma, verão todos as publicações de pedidos e decidirá qual entidade ajudar.
 
 ## Exemplo de uso
+
 Um professor que oferece aulas de reforço em matemática está precisando de livros de matemática, então ele acessa o site Escola Reusar e cria um pedido de doação.
 No bairro do lado, um jovem que acabou de sair do ensino médio, deseja repassar os livros da escola por ocuparem muito espaço e entra no site Escola Reusar, ao indicar sua localização, o site mostra que no bairro vizinho tem alguém precisando de livros de matemática.
 Os dois usuários entram em contato e realizam a doação.
+
+## 🧰 Tecnologias utilizadas
+
+ - Python
+ - HTML
+ - CSS
+ - JavaScript
+ - FastAPI
+ - PostgreSQL
+ - Visual Studio Code
+ - DBeaver
+
+## 📁 Estrutura do projeto
+
+```
+├── index.html              # Página inicial (landing)
+├── src/
+|   ├── paginas/                # Todas as demais páginas
+│       ├── login.html          # Login
+│       ├── cadastro.html       # Cadastro de usuário
+│       ├── lista-pedidos.html  # Área de pedidos (lista geral)
+│       ├── meus-pedidos.html   # Pedidos do usuário logado
+│       └── perfil.html         # Perfil do usuário
+|   ├── css/
+│       ├── base.css            # Estilos COMPARTILHADOS: reset, cabeçalho e rodapé
+│       ├── login-cadastro.css  # Estilos das telas de login e cadastro
+│       ├── index.css           # Estilos da landing (index)
+│       ├── perfil.css          # Estilos da tela de perfil
+│       └── pedidos.css         # Estilos das telas de pedidos
+|   ├── models/                 # Classes do sistema
+|       ├── __init__.py          
+|       ├── doacao.py            
+|       ├── doador.py            
+|       ├── material_escolar.py  
+|       ├── pedido_doacao.py     
+|       ├── pedido_material.py   
+|       ├── recebedor.py         
+│       └── usuario.py           
+└── imgs/                       # Logo e ilustrações
+```
+
+## 📲 Instalação e execução
+
+## ⚙️ Processo de desenvolvimento
+O processo de desenvolvimento foi divido por classes e telas junto com seus respectivos arquivos CSS e adaptação para diferentes telas, a edição do readme do projeto é responsabilidade de toda a equipe.
+
+### 👥 Divisão de tarefas:
+ - Pablo:
+   - Telas: lista-pedidos.html e meus-pedidos.html
+   - CSS: base.css e pedidos.css
+   - Classes: usuario.py, doador.py, recebedor.py
+ - Sarah:
+   - Telas: login.html e cadastro.html
+   - CSS: login-cadastro.css
+   - Classes: doacao.py
+ - Saulo:
+   - Telas: detalhe-pedido.html e criacao-pedidos.html
+   - CSS: detalhe-criacao-pedidos.css
+   - Classes: material_escolar.py
+ - Vinicius:
+   - Telas: index.html e perfil.html
+   - CSS: index.css e perfil.css
+   - Classes: pedido_material.py e pedido_doacao.py
+
+Sobre o versionamento e o uso do repositório no GitHub, cada desenvolvedor tinha criou uma branch própria para suas modificações e mantinha seus arquivos versionados com o Git. Commits e pushs também são de responsabilidade de cada desenvolvedor em suas respectivas branchs, exceto pelo merge e commit para a branch principal que era realizado pelo dev Vinicius Tabosa com auxílio da equipe, para resolução de possíveis conflitos de merge.
+
+## 📦 MVP
+
+### 🔨 Principais funcionalidades implementadas
+ - Classes de cada componente do sistema
+ - Páginas web responsivas
+
+### ⛵ Fluxo de navegação
+```
+├── Página inicial
+|   ├── Login / Cadastro 
+|   ├── Feed de pedidos 
+|       ├── Detalhes do pedido 
+|   ├── Criar novo pedido
+|   ├── Meus pedidos
+|   ├── Perfil
+```
+
+### 🖼️ Imagens do sistema
+ - Tela inicial
+![Tela inicial](/exemplo-uso/img1.png)
+
+ - Tela de login
+![Tela de login](/exemplo-uso/img2.png)
+
+ - Tela de lista de pedidos
+![Tela de lista de pedidos](/exemplo-uso/img3.png)
+
+ - Tela de detalhes do pedido
+![Tela de detalhes do pedido](/exemplo-uso/img4.png)
+
+ - Tela de perfil do usuário
+![Tela de perfil do usuário](/exemplo-uso/img5.png)
+
+
 
 ## 💾 Projeto Físico de Banco de Dados
 
@@ -112,3 +213,11 @@ A arquitetura de software em um projeto, consegue se traduzir diretamente em val
 
 ### Como a arquitetura influencia diretamente a qualidade de um projeto de software?
   A arquitetura de software assegura que fatores como escalabilidade, segurança, desempenho, manutenção e evolução do sistema atendam aos requisitos apontados pelo cliente, evite retrabalho da equipe de desenvolvimento, aumenta a longevidade do software e que seja capaz de se adaptar a requisitos em constante mudança. 
+
+
+## 👥 Equipe — PISociety
+
+- Pablo Henrique ([@phpablo](https://github.com/phpablo))
+- Sarah Oliveira ([@Sarah-Oliver-SOL](https://github.com/Sarah-Oliver-SOL))
+- Saulo Victo ([@Saulo-victo](https://github.com/Saulo-victo))
+- Vinicius Tabosa ([@ViniciusTabosa](https://github.com/ViniciusTabosa))
