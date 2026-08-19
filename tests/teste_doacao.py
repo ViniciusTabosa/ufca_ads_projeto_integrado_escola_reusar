@@ -2,10 +2,14 @@ from src.models.doador import Doador
 from src.models.recebedor import Recebedor
 from src.models.pedido_doacao import PedidoDoacao
 from src.models.pedido_material import MateriaisPedido
+from src.models.material_escolar import MaterialEscolar
 from src.models.doacao import Doacao
 
 def main():
-    materiais = MateriaisPedido("Caderno", "Lápis")
+    materiais = MateriaisPedido(
+        MaterialEscolar("Caderno", "96 folhas", "novo", 2),
+        MaterialEscolar("Lápis", "grafite HB", "novo", 5),
+    )
 
     recebedor = Recebedor(
         id_usuario=1,
