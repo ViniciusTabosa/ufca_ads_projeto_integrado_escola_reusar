@@ -20,37 +20,23 @@ from src.repositories.usuario_repository import (
 )
 from src.utils.seguranca import verificar_senha
 
-# Onde este arquivo está: src/
+# local src
 PASTA_SRC = Path(__file__).resolve().parent
 
-# 'app' é a aplicação em si. É este objeto que o uvicorn vai executar.
+# objeto da aplicação
 app = FastAPI(title="Escola Reusar")
 
-# Garante que o banco e as tabelas existem antes de atender qualquer
-# requisição. Assim, quem clona o projeto só precisa subir o servidor.
+# Garante que o banco e as tabelas existem
 criar_banco()
 
 
-# ---------------------------------------------------------------------
 # Arquivos estáticos: CSS, imagens e as páginas HTML.
-#
-# "Estático" = o servidor apenas entrega o arquivo como ele está no disco,
-# sem executar nada. Os endereços abaixo espelham a estrutura de pastas
-# de propósito, para que os caminhos relativos já escritos nos HTML
-# (../css/base.css, ../imgs/logo.png, cadastro.html) continuem válidos.
-# ---------------------------------------------------------------------
 app.mount("/css", StaticFiles(directory=PASTA_SRC / "css"), name="css")
 app.mount("/imgs", StaticFiles(directory=PASTA_SRC / "imgs"), name="imgs")
 app.mount("/paginas", StaticFiles(directory=PASTA_SRC / "paginas"), name="paginas")
 
 
-# ---------------------------------------------------------------------
-# Rotas escritas em Python.
-# ---------------------------------------------------------------------
-
-# O decorador abaixo lê-se assim:
-#   "quando alguém pedir o endereço '/' usando o método GET,
-#    execute a função que vem em seguida e devolva o que ela retornar"
+# Rotas
 @app.get("/")
 def pagina_inicial():
     """Entrega a landing page do projeto."""
