@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pedido</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detalhe-criacao-pedidos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imgs/logo.png" alt="Logo Escola Reusar">
+            <h1>Escola Reusar</h1>
+        </div>
+
+        <nav class="menu-logado menu">
+      <input type="checkbox" class="menu-faketrigger">
+
+      <div class="menu-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul>
+        <li><a href="lista-pedidos.html">Área de pedidos</a></li>
+        <li><a href="criacao-pedidos.html">Novo pedido</a></li>
+        <li><a href="meus-pedidos.html">Meus pedidos</a></li>
+        <li><a href="perfil.html">Meu perfil</a></li>
+        <li><a href="../index.html">Sair</a></li>
+      </ul>
+    </nav>
+
+    </header>
+
+    <main class="bloco-pedidos">       
+        <h1>Detalhes do pedido</h1> 
+        <form action="" method="post">                
+            <div class="campo-form">
+                <label for="titulo-pedido">Título do pedido:</label>
+                <input type="text" id="titulo-pedido" class="campo-entrada-titulo" value="Título do pedido" readonly/>
+            </div>
+
+            <div class="campo-form">
+                <label for="endereco-pedido">Endereço:</label>
+                <input type="text" id="endereco-pedido" class="campo-entrada-titulo" value="Endereço de doação" readonly/>
+            </div>
+
+            <div class="campo-form">
+                <label for="descricao-pedido">Descrição do pedido:</label>
+                <textarea id="descricao-pedido" class="campo-entrada-textarea" readonly>Descrição do pedido</textarea>     
+            </div>           
+
+            <div class="campo-form">
+                <label for="lista-materiais">Lista de materiais:</label>
+                <textarea id="lista-materiais" class="campo-entrada-textarea" readonly>Materiais solicitados</textarea>                
+            </div>    
+
+            <div class="campo-form">
+                <span class="titulo-campo">Imagens de referência</span>
+                <div class="caixa-dropzone">
+                    <p class="text-upload-image">Imagens de referência do pedido</p>
+                </div>                
+            </div>    
+
+            <div class="alinhamento-botoes">                    
+                <a href="lista-pedidos.html" class="btn-publicar btn-secundario">Voltar</a>  
+                <button class="btn-publicar" type="submit">Entrar em contato</button>   
+            </div>
+        </form>   
+    </main>   
+
+    <footer>
+        <p>Code by: <a href="https://github.com/ViniciusTabosa/ufca_ads_escolar_reusar_front-end" target="_blank">PISociety</a></p>
+    </footer>
+</body>
+</html>
