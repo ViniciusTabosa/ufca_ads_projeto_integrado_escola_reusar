@@ -1,4 +1,4 @@
-from material_escolar import MaterialEscolar
+from src.models.material_escolar import MaterialEscolar
 
 class MateriaisPedido:
     def __init__(self, *args: MaterialEscolar):
