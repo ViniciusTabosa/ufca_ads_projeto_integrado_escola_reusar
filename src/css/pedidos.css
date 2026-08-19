@@ -1,0 +1,256 @@
+/* Reset, cabeçalho e rodapé compartilhados: css/base.css */
+
+:root {
+    --azul-escuro: #444A5F;
+    /* cabeçalho */
+    --azul-rodape: #353843;
+    /* rodapé */
+    --verde: #00CCA0;
+    /* logo e detalhes */
+    --verde-claro: #56EECD;
+    /* botão "Mostrar mais" */
+    --amarelo-forte: #FDF279;
+    /* faixa de título do pedido */
+    --amarelo-claro: #F8F4BD;
+    /* descrição do pedido */
+    --cinza-borda: #D9DBE0;
+    --texto: #3B3B3B;
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- Conteúdo ---------- */
+.conteudo {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    padding: 36px 40px;
+}
+
+/* Cartão de filtros (só na Lista de Pedidos) */
+.filtros {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 12px;
+    padding: 18px 16px;
+    width: 170px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtros h2 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.filtros-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.pill {
+    border: 1px solid var(--verde);
+    border-radius: 999px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 4px 10px;
+}
+
+.pill:hover,
+.pill.pill-ativo {
+    background-color: #D9F9EF;
+}
+
+/* Cartão principal com a lista de pedidos */
+.lista {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 12px;
+    padding: 20px 16px 20px 24px;
+    width: 100%;
+    max-width: 860px;
+    display: flex;
+    gap: 14px;
+}
+
+.lista-itens {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.lista-titulo {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Barra de rolagem decorativa (estática, como no protótipo) */
+.trilho {
+    width: 10px;
+    border-radius: 999px;
+    background-color: #F1F1F1;
+    display: flex;
+}
+
+.trilho span {
+    width: 10px;
+    height: 45%;
+    border-radius: 999px;
+    background-color: #C4C4C4;
+}
+
+/* ---------- Item de pedido ---------- */
+.pedido {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}
+
+/* Carrossel de fotos (estático) */
+.carrossel {
+    width: 150px;
+    min-height: 130px;
+    border: 2px solid var(--azul-escuro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.carrossel-corpo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    color: var(--texto);
+}
+
+.pontos {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 0 10px;
+}
+
+.ponto {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid var(--azul-escuro);
+}
+
+.ponto.cheio {
+    background-color: var(--azul-escuro);
+}
+
+/* Bloco amarelo com título e descrição */
+.pedido-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pedido-info h3 {
+    background-color: var(--amarelo-forte);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+.pedido-info p {
+    background-color: var(--amarelo-claro);
+    border-radius: 8px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 12px 16px;
+    flex: 1;
+}
+
+.pedido-info:hover h3 {
+    filter: brightness(0.96);
+}
+
+/* Botão "Mostrar mais" */
+.botao-mais {
+    align-self:       center;
+    background-color: var(--verde-claro);
+    border:           1px solid #2BA58C;
+    border-radius:    8px;
+    font-size:        0.8rem;
+    font-weight:      600;
+    color:            #21424D;
+    padding:          8px 18px;
+    margin-top:       6px;
+}
+
+.botao-mais:hover {
+    filter: brightness(0.95);
+}
+
+/* media querys */
+
+/* Tablet/celular: filtros viram uma faixa acima da lista */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px;
+    }
+
+    .filtros {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filtros h2 {
+        margin-bottom: 0;
+    }
+
+    .lista {
+        padding: 16px;
+    }
+
+    .trilho {
+        display: none;
+    }
+}
+
+/* Celular: foto do pedido acima do texto */
+@media (max-width: 480px) {
+    .conteudo {
+        padding: 18px 12px;
+    }
+
+    .pedido {
+        flex-direction: column;
+    }
+
+    .carrossel {
+        width: 100%;
+        min-height: 160px;
+    }
+}
