@@ -1,0 +1,150 @@
+/* Reset, cabeçalho e rodapé compartilhados: css/base.css */
+
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* ===== CONTEÚDO ===== */
+
+main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 80px;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    width:100%;
+    max-width:1200px;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+.formulario{
+    background:#4d5269;
+    width:460px;
+    padding:40px;
+    border-radius:18px;
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.formulario h2{
+    color:#42f0d2;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.formulario p{
+    color:#d9d9d9;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:6px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:18px;
+    font-size:14px;
+}
+
+button{
+    display:block;
+    margin:30px auto 0;
+    width:140px;
+    padding:12px;
+    border-radius:18px;
+    border:1px solid white;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:white;
+    color:#4d5269;
+}
+
+
+
+.ilustracao{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.placeholder-imagem{
+    width:420px;
+    height:420px;
+}
+
+
+.ilustracao img{
+    width:420px;
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 18px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 460px;
+        padding: 30px 25px;
+    }
+
+    .formulario h2 {
+        font-size: 28px;
+    }
+
+    .ilustracao img {
+        width: 420px;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
