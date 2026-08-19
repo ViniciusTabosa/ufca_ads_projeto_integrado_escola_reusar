@@ -204,15 +204,6 @@ binário e cada desenvolvedor tem os seus próprios dados de teste. O que é ver
 
 Para inspecionar o banco visualmente, abra o arquivo `escola_reusar.db` no DBeaver.
 
-### 🔎 Solução de problemas
-
-| Problema | Causa e solução |
-|---|---|
-| `Could not import module "src.main.py"` | O caminho usa pontos e não leva a extensão. O correto é `src.main:app` |
-| `[Errno 10048] error while attempting to bind` | A porta 8000 já está em uso por outra execução. Encerre o processo anterior ou use outra porta: `--port 8001` |
-| `ModuleNotFoundError: No module named 'src'` | O comando foi executado de dentro de uma subpasta. Volte para a raiz do projeto |
-| `Form data requires "python-multipart"` | As dependências não foram instaladas. Execute `pip install -r requirements.txt` |
-
 ## ⚙️ Processo de desenvolvimento
 O processo de desenvolvimento foi divido por classes e telas junto com seus respectivos arquivos CSS e adaptação para diferentes telas, a edição do readme do projeto é responsabilidade de toda a equipe.
 
@@ -243,16 +234,6 @@ Nesta sprint o projeto deixou de ser um conjunto de telas estáticas e passou a 
 - **Sarah:** ligação dos formulários de login e cadastro às rotas do servidor, com campos obrigatórios e seleção de perfil
 - **Vinicius:** integração das branches, revisão da documentação e validação do fluxo completo na aplicação em execução
 
-### 🧩 Dificuldades encontradas e soluções adotadas
-
-| Dificuldade | Solução adotada |
-|---|---|
-| Os formulários tinham apenas o atributo `id` nos campos, e por isso nenhum dado chegava ao servidor | Foi acrescentado o atributo `name` em cada campo, que é o nome com que o dado é enviado na requisição |
-| Os formulários não declaravam método, e o padrão do HTML é `GET`, o que exporia a senha na barra de endereços | Os formulários passaram a usar `method="post"`, que envia os dados no corpo da requisição |
-| Os caminhos de CSS e imagens nas páginas são relativos (`../css/base.css`) e quebrariam ao serem servidos por rotas com nomes diferentes | As URLs do servidor foram definidas espelhando a estrutura de pastas, o que permitiu servir todas as telas sem alterar os caminhos já escritos nos arquivos HTML |
-| O banco exigia o campo `tipo_perfil`, mas nenhuma tela oferecia a escolha entre doador e recebedor | Foi acrescentado um campo de seleção no formulário de cadastro, e o próprio banco valida os valores aceitos com uma restrição `CHECK` |
-| Risco de gravar senha em texto puro no banco | A senha passou a ser convertida em hash com salt (PBKDF2-SHA256) dentro da própria camada de repositório, de modo que nenhum outro ponto do código consiga gravá-la sem proteção |
-| Risco de SQL injection ao montar consultas com dados vindos do formulário | Todo o SQL usa parâmetros (`?`) em vez de concatenação de texto |
 
 ### 🌿 Versionamento
 
