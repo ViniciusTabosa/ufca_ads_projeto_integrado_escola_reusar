@@ -38,3 +38,5 @@ jobs:
       - name: 6. Testar o Build do Docker
         run: |
           docker build -t fastorder-api-test .              
+
+#Verificando 
