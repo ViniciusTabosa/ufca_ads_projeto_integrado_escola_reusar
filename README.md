@@ -287,6 +287,9 @@ atualizar a página reenvie o formulário e crie um cadastro duplicado.
  - Tela inicial
 ![Tela inicial](/exemplo-uso/img1.png)
 
+- Tela de cadastro
+![Tela de cadastro](image.png)
+
  - Tela de login
 ![Tela de login](/exemplo-uso/img2.png)
 
