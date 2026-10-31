@@ -3,11 +3,11 @@ name: Esteira de integração Escola Reusar (CI)
 on:
   push:
     branches:
-      -main
+      - main
 
   pull_request:
     branches:
-      -main
+      - main
 
 jobs:
   build-and-test:
@@ -39,4 +39,3 @@ jobs:
         run: |
           docker build -t fastorder-api-test .              
 
-#Verificando 
