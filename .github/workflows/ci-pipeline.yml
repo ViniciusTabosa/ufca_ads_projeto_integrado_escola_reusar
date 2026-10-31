@@ -28,13 +28,13 @@ jobs:
           pip install -r requirements.txt
         
       - name: 4. Validacao Estatica (Lint com Flake8)
-            run: |
-              flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        run: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
       - name: 5. Rodar Testes Automatizados (Pytest)
-            run: |
-              pytest -v
+        run: |
+          pytest -v
 
       - name: 6. Testar o Build do Docker
-            run: |
-              docker build -t fastorder-api-test .              
+        run: |
+          docker build -t fastorder-api-test .              
