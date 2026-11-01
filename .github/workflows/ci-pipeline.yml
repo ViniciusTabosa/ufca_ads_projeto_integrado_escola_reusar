@@ -15,7 +15,7 @@ env:
 
 jobs:
   lint-and-test:
-    name: Qualidade e Testes Funcionais
+    name: 1. Qualidade e Testes Funcionais
     runs-on: ubuntu-latest
 
     steps:
