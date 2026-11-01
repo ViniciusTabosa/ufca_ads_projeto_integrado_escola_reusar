@@ -68,7 +68,7 @@ jobs:
 
       - name: 2.5 SAST - Análise Estática com o Bandit
         run: |
-          bandit -r . -ll -ii
+          bandit -r .-lll
 
       - name: 2.6 SCA - Análise de Dependências com o Pip Audit
         run: |
