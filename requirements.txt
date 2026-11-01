@@ -7,4 +7,5 @@ pytest
 bandit
 pip-audit
 trivy-py
+filelock>=4.2.1
 
