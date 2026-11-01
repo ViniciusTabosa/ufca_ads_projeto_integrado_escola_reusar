@@ -492,6 +492,14 @@ A arquitetura de software em um projeto, consegue se traduzir diretamente em val
 ### Como a arquitetura influencia diretamente a qualidade de um projeto de software?
   A arquitetura de software assegura que fatores como escalabilidade, segurança, desempenho, manutenção e evolução do sistema atendam aos requisitos apontados pelo cliente, evite retrabalho da equipe de desenvolvimento, aumenta a longevidade do software e que seja capaz de se adaptar a requisitos em constante mudança. 
 
+## 🏭️ Integração Contínua
+
+### O que é Integração Contínua?
+Integração Contínua (Continuous Integration/CI) é uma prática de desenvolvimento da cultura de DevOps, em que os desenvolvedores submetem seus códigos continuamente em pequenas partes para um repositório central que dá início aos processos automatizados de integração. No repositório é realizado automaticamente e sequencialmente, como uma esteira de processos, rotinas que agilizam o desenvolvimento e implantação das mudanças do software, como verificações, build, testes automatizados e notificações de erros.
+
+### Por que CI é importante para quem está aprendendo a programar?
+DevOps tem se tornado o padrão de cultura em empresas de software, que têm como objetivo maximizar a geração de valor de seus produtos e reduzir conflitos entre setores do desenvolvimento. Integração Contínua faz parte de um dos princípios do DevOps, sendo um componente chave desta cultura. Para um desenvolvedor iniciante, ter o conhecimento de práticas como versionamento, commits, deploy, integração, automação e outros aspectos do dia a dia da indústria, o torna mais preparado e familiarizado com a rotina que irá enfrentar no mercado e cria uma bagagem de como lidar com problemas comuns do desenvolvimento.
+
 
 ## 👥 Equipe — PISociety
 
