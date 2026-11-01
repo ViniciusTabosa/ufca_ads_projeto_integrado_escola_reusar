@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  VERSAO_PYTHON: "3.10"
+  VERSAO_PYTHON: "3.11"
   NOME_VERSAO: "1.0.0"
   ENV_NAME: "producao"
 
