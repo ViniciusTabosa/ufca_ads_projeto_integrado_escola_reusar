@@ -4,4 +4,7 @@ python-multipart
 flake8
 werkzeug
 pytest
+bandit
+pip-audit
+trivy-py
 
